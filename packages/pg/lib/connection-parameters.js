@@ -23,10 +23,10 @@ var readSSLConfigFromEnvironment = function () {
     case 'disable':
       return false
     case 'prefer':
-    case 'require':
     case 'verify-ca':
     case 'verify-full':
       return true
+    case 'require':
     case 'no-verify':
       return { rejectUnauthorized: false }
   }
